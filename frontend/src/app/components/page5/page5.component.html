@@ -1,0 +1,16 @@
+<div class="page-container">
+    <h1>Page 5</h1>
+    <div *ngIf="buttonStats.length > 0">
+      <h2>Button Click Statistics</h2>
+      <ul>
+        <li *ngFor="let stat of buttonStats">
+          {{ stat.buttonName }}: {{ stat.clickCount }} clicks
+        </li>
+      </ul>
+    </div>
+    <button (click)="onButtonClick('page1')">Go to Page 1</button>
+    <button (click)="onButtonClick('page2')">Go to Page 2</button>
+    <button (click)="onButtonClick('page3')">Go to Page 3</button>
+    <button (click)="onButtonClick('page4')">Go to Page 4</button>
+  </div>
+  
